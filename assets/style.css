@@ -1,0 +1,299 @@
+/* 
+	CSS RESET
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+
+/**************** LAYOUT ****************/
+/*
+  ========================================
+  Flex
+  ========================================
+*/
+.block{
+  width:100%;
+  padding:3rem 1rem;
+}
+.cards{
+  display:flex;
+  gap:1.5rem;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+/*****  Services 3 Cards *****/
+.cards--3 .card{
+  flex:1 1 300px;
+}  
+/*****  Projects 2 Cards *****/
+.cards--2 .card{
+  flex:1 1 400px;
+}  
+
+/*****  Header  *****/
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.primary-nav a {
+  margin-left: 2rem;
+}
+
+/*****  Hero  *****/
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero h2 {
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  margin-bottom: 0.75rem;
+}
+
+.hero .btn {
+  margin-top: 1rem;
+}
+
+/*****  Cards (services/projects) *****/
+.card {
+  padding: 2rem;
+}
+
+.view-more {
+  display: inline-block;
+  margin-top: 0.75rem;
+}
+
+/*****  Why Choose Us *****/
+.why .btn--alt {
+  margin-top: 1rem;
+}
+
+/*****  Footer  *****/
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer .social-nav a {
+  margin-left: 1rem;
+}
+
+/*****  Buttons  *****/
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+}
+
+
+/*
+  ========================================
+  Typography
+  ========================================
+*/
+.logo a{
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-weight: 700;
+  text-decoration: none;
+
+}
+.primary-nav a {
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/*****  Hero  *****/
+.hero {
+  text-align: center;
+  background: white;
+  border: 1px solid black;
+}
+
+.hero h2 {
+  font-size: clamp(1.8rem, 5vw, 3rem);
+}
+
+/*****  Cards (services/projects) *****/
+.card {
+  background: #ffffff;
+  border: 1px solid black;
+  text-align: center;
+}
+
+.view-more {
+  font-size: 0.9rem;
+}
+
+/*****  Why Choose Us *****/
+.why {
+  background: gray;
+  color: #fff;
+  text-align: center;
+}
+
+.why .btn--alt {
+  background: #fff;
+  color: black;
+}
+
+/*****  Footer  *****/
+.footer {
+  background: black;
+  color: #fff;
+}
+
+.footer .social-nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/*****  Buttons  *****/
+.btn {
+  padding: 0.75rem 1.5rem;
+  border: 0;
+  background: gray;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 0.25rem;
+}
+
+.btn--alt {
+  background: #fff;
+  color: gray;
+  border: 2px solid black;
+}
+
+
+/*
+  ========================================
+  Primary header
+  ========================================
+*/
+
+
+.tagline {
+  
+}
+.primary-nav {
+  
+}
+
+/*
+  ========================================
+  Navigation
+  ========================================
+*/
+
+.nav {
+
+}
+
+/*
+  ========================================
+  Home
+  ========================================
+*/
+
+.hero {
+  
+}
+
+.teaser {
+}
+
+/*
+  ========================================
+  Links
+  ========================================
+*/
+
+a {
+}
+
+/*
+  ========================================
+  Buttons
+  ========================================
+*/
+
+.btn {
+  
+  }
+.btn-alt {
+   
+  }
+
+/*
+  ========================================
+  Primary footer
+  ========================================
+*/
+
+.primary-footer {
+
+  }
+.primary-footer small {
+
+  }
+  
+
+/*
+  ========================================
+  Custom styles
+  ========================================
+*/
