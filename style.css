@@ -1,4 +1,4 @@
-/* ===== RESET ===== */
+
 * {
     margin: 0;
     padding: 0;
@@ -12,7 +12,7 @@
     line-height: 1.6;
   }
   
-  /* ===== GENERAL UTILITIES ===== */
+  
   .container {
     max-width: 1100px;
     margin: 0 auto;
@@ -81,9 +81,8 @@
     align-items: center;
     justify-content: space-between;
     gap: 40px;
-    max-width: 1100px;   /* ✅ This matches the .container width */
-    margin: 0 auto;       /* ✅ Centers it */
-    padding: 0 20px;      /* ✅ Add horizontal padding to align */
+    margin: 0 auto;       
+    padding: 0 20px;      
     flex-wrap: wrap;
   }
   
