@@ -1,5 +1,6 @@
-/* 
-	CSS RESET
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
 */
 
 html, body, div, span, applet, object, iframe,
@@ -53,8 +54,19 @@ table {
           box-sizing: border-box;
 }
 
+/**************** THEME COLORS ****************/
 
-/**************** LAYOUT ****************/
+:root {
+  --clr-bg-light: #b0dbf8;  /* Light page background */
+  --clr-blue-darkest: #0A1F44;   /* Primary dark blue (header, footer, cards) */
+  --clr-text-light: #FDFDFD;     /* Cream / soft white text */
+  --clr-hover: #CBD5E1;     /* Soft gray-blue for hover, borders */
+  --clr-accent: #3498db;    /* Optional accent / highlight */
+}
+
+
+
+/**************** LAYOUT AND SIZING ****************/
 /*
   ========================================
   Flex
@@ -84,10 +96,23 @@ table {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
 
+  /* SIZING */
+
+  padding: 80px 20px;
+  height: 80px;   
+  overflow: hidden;  
+}
+.logo img {
+  height: 250px;
+  max-width: 100%;
+  object-fit: contain;
+}
 .primary-nav a {
-  margin-left: 2rem;
+  margin-left: 5rem;
+}
+.primary-nav a:last-child {
+  margin-right: 2rem;
 }
 
 /*****  Hero  *****/
@@ -95,15 +120,22 @@ table {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
 
+  /* SIZING */
+  padding: 5rem 1rem;
+}
 .hero h2 {
-  font-size: clamp(1.8rem, 5vw, 3rem);
-  margin-bottom: 0.75rem;
+  margin-bottom: 1.5rem;
+  max-width: 800px;
 }
-
+.hero p {   
+  margin: 0 auto;  
+  margin-bottom: 1.5rem;
+  max-width: 800px;
+}
 .hero .btn {
   margin-top: 1rem;
+  padding: 1.5rem;
 }
 
 /*****  Cards (services/projects) *****/
@@ -140,11 +172,21 @@ table {
 }
 
 
+
 /*
   ========================================
   Typography
   ========================================
 */
+
+body {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
 .logo a{
   font-size: clamp(1.5rem, 4vw, 2.5rem);
   font-weight: 700;
@@ -154,6 +196,7 @@ table {
 .primary-nav a {
   text-decoration: none;
   font-weight: 500;
+  font-size: 1.2rem;
 }
 
 /*****  Hero  *****/
@@ -162,11 +205,15 @@ table {
   background: white;
   border: 1px solid black;
 }
-
 .hero h2 {
-  font-size: clamp(1.8rem, 5vw, 3rem);
+  font-size: clamp(2rem, 6vw, 3.5rem);
 }
-
+.hero p {       
+  font-size: 1.8rem;            
+}
+.hero .btn {
+  font-size: 1.1rem;
+}
 /*****  Cards (services/projects) *****/
 .card {
   background: #ffffff;
@@ -217,6 +264,39 @@ table {
   color: gray;
   border: 2px solid black;
 }
+
+/*
+  ========================================
+  COLOR THEME
+  ========================================
+*/
+
+/***** Header *****/
+.header{
+  background-color: var(--clr-blue-darkest);
+}
+.header *{
+  color: var(--clr-text-light);
+}
+.header a:hover{
+  color: var(--clr-accent);
+}
+
+/***** Hero *****/
+.hero .btn {
+  background: var(--clr-accent);
+  color: #fff;
+}
+.hero .btn:hover {
+  background: var(--clr-blue-darkest);
+}
+
+
+
+
+
+
+
 
 
 /*
@@ -284,16 +364,23 @@ a {
   ========================================
 */
 
-.primary-footer {
 
-  }
-.primary-footer small {
-
-  }
-  
 
 /*
   ========================================
   Custom styles
   ========================================
 */
+
+/*
+  ========================================
+  Responsiveness
+  ========================================
+*/
+
+
+@media (max-width: 600px) {
+  .logo img {
+    height: 45px;
+  }
+}
