@@ -1,8 +1,4 @@
-/* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
+/* RESET */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -23,7 +19,6 @@ time, mark, audio, video {
   font: inherit;
   vertical-align: baseline;
 }
-/* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block;
@@ -40,7 +35,6 @@ blockquote, q {
 blockquote:before, blockquote:after,
 q:before, q:after {
   content: '';
-  content: none;
 }
 table {
   border-collapse: collapse;
@@ -49,362 +43,144 @@ table {
 *,
 *:before,
 *:after {
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-/**************** THEME COLORS ****************/
-
+/* THEME COLORS */
 :root {
-  --clr-bg-light: #c2dff3;  /* Light page background */
-  --clr-blue-darkest: #0A1F44;   /* Primary dark blue (header, footer, cards) */
-  --clr-text-light: #FDFDFD;     /* Cream / soft white text */
-  --clr-hover: #CBD5E1;     /* Soft gray-blue for hover, borders */
-  --clr-accent: #3498db;    /* Optional accent / highlight */
+  --clr-bg-light: #c2dff3;
+  --clr-blue-darkest: #0A1F44;
+  --clr-text-light: #FDFDFD;
+  --clr-hover: #CBD5E1;
+  --clr-accent: #3498db;
 }
 
-
-
-/**************** LAYOUT AND SIZING ****************/
-/*
-  ========================================
-  Flex
-  ========================================
-*/
-.block{
-  width:100%;
-  padding:3rem 1rem;
+/* GENERAL LAYOUT */
+.block {
+  width: 100%;
+  padding: 3rem 1rem;
 }
-.cards{
-  display:flex;
+.cards {
+  display: flex;
   gap: 2rem;
-  flex-wrap:wrap;
-  justify-content:center;
-}
-/*****  Services 3 Cards *****/
-.cards--3 .card{
-  flex:1 1 300px;
-  max-width: 500px;
-}  
-#services-teaser img{
-  width: 300px;
-}
-/*****  Projects 2 Cards *****/
-.cards--2 .card{
-  flex:1 1 400px;
-  max-width: 700px;
-}  
-#projects-teaser img{
-  width: 300px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-/*****  Header  *****/
+/* CARDS */
+.cards--3 .card {
+  flex: 1 1 300px;
+  max-width: 500px;
+}
+#services-teaser img,
+#projects-teaser img {
+  width: 300px;
+}
+.cards--2 .card {
+  flex: 1 1 400px;
+  max-width: 700px;
+}
+
+/* HEADER */
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  /* SIZING */
-
-  padding: 50px 20px 50px 20px;
-  height: 80px;   
-  overflow: hidden;  
+  flex-wrap: wrap;
+  padding: 20px;
+  background-color: var(--clr-blue-darkest);
+  position: relative;
 }
 .logo img {
-  height: 200px;
+  height: 70px;
   max-width: 100%;
   object-fit: contain;
 }
-.primary-nav a {
-  margin-left: 5rem;
-}
-.primary-nav a:last-child {
-  margin-right: 2rem;
-}
-
-/*****  Hero  *****/
-.hero {
+.primary-nav {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  /* SIZING */
-  padding: 5rem 1rem;
-}
-.hero h1 {
-  margin-bottom: 1.5rem;
-  max-width: 800px;
-}
-.hero p {   
-  margin: 0 auto;  
-  margin-bottom: 1.5rem;
-  max-width: 800px;
-}
-
-/*****  Cards (services/projects) *****/
-#services-teaser h2  {
-  width: 100%;
-  text-align: center;
-  margin-bottom: 2rem;
-}
-#projects-teaser h2 {
-  width: 100%;
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  /* SIZING */
-  padding: 2rem;
-}
-.card h3{
-  padding-bottom: 1.1rem;
-}
-.card p{
-  max-width: 500px;
-  padding: 1rem 0.5rem;
-}
-
-/*****  Why Choose Us *****/
-.why{
-  max-width: 1000px;
-  margin: 0 auto;
-  margin-top: 3rem;
-  margin-bottom: 5rem;
-}
-.why h3{
-  margin-bottom: 2rem;
-  padding-inline: 0;
-  padding-top: 0;
-}
-.why p{
-  margin-bottom: 2.5rem;
-  max-width: 700px;
-  margin: 0 auto;
-}
-.why .btn{
-  display: block;
-  margin: 0 auto;
-  width: 30%;
-  
-}
-.why .btn--alt {
-  margin-top: 1rem;
-}
-
-/*****  Footer  *****/
-.footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: nowrap;
-  padding: 1rem 2rem; 
-}
-
-.footer .social-nav ul {
-  display: flex;
-  align-items: center;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.footer .social-nav li{
-  display: flex;
-  align-items: center;
-  margin-left: 0.5rem;
-}
-.footer .social-nav li a:last-child{
-  margin-right: 2rem;
-}
-.footer .social-nav img {
-  width: 20px;      
-  height: 2rem;
-  object-fit: contain;
-  margin-right: 0.3rem;
-}
-
-.footer small {
-  margin-left: 2rem;
-}
-
-
-/*
-  ========================================
-  Typography
-  ========================================
-*/
-
-body {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-/***** Header *****/
-.logo a{
-  font-size: clamp(1.5rem, 4vw, 2.5rem);
-  font-weight: 700;
-  text-decoration: none;
-
+  gap: 2rem;
 }
 .primary-nav a {
   text-decoration: none;
   font-weight: 500;
   font-size: 1.2rem;
+  color: var(--clr-text-light);
+}
+.primary-nav a:hover {
+  color: var(--clr-accent);
 }
 
-/*****  Hero  *****/
+/* HAMBURGER MENU */
+.nav-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  top: 25px;
+  right: 20px;
+  z-index: 10;
+}
+
+/* HERO */
 .hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  background: white;
+  background-image: url(https://img.freepik.com/premium-photo/business-data-financial-figures-visualiser-graphic_31965-23939.jpg?semt=ais_hybrid&w=740);
+  background-size: cover;
+  background-position: center;
+  padding: 5rem 1rem;
   border: 1px solid black;
 }
 .hero h1 {
   font-size: clamp(2rem, 6vw, 3.5rem);
-}
-.hero p {       
-  font-size: 1.8rem; 
-  line-height: 1.6;
-
-}
-
-/*****  Cards (services/projects) *****/
-#services-teaser h2 {
-  font-size: clamp(2rem, 5vw, 3rem);
-}
-#projects-teaser h2 {
-  font-size: clamp(2rem, 5vw, 3rem);
-}
-.card h3{
-  font-size: 2rem;
-}
-.card {
-  text-align: center;
-  font-size: 1.5rem;
-}
-.view-more {
-  font-size: 0.9rem;
-}
-
-/*****  Why Choose Us *****/
-.why h3 {
-  font-size: clamp(1.8rem, 4vw, 2rem);
-  text-align: center;
-}
-
-.why p{
-  font-size: 1.5rem;
-  text-align: center;
-}
-.why .btn{
-  text-align: center;
-}
-
-/*****  Footer  *****/
-.footer {
-  background: black;
+  margin-bottom: 1.5rem;
   color: #fff;
-}
-
-.footer .social-nav a {
-  color: #fff;
-  text-decoration: none;
-}
-
-
-/*
-  ========================================
-            COLOR THEME
-  ========================================
-*/
-h1, h2, h3, h4, h5, h6{
-  color: var(--clr-blue-darkest)
-}
-
-/***** Header *****/
-.header{
-  background-color: var(--clr-blue-darkest);
-}
-.header *{
-  color: var(--clr-text-light);
-}
-.header a:hover{
-  color: var(--clr-accent);
-}
-
-/***** Hero *****/
-.hero{
-  background-image: url(https://img.freepik.com/premium-photo/business-data-financial-figures-visualiser-graphic_31965-23939.jpg?semt=ais_hybrid&w=740);
-}
-.hero h1{
-  color: #fff;
-}
-.hero p{
-  color: #fff;
-}
-.hero .btn{
-  color: #fff;
-}
-.hero .btn:hover{
-  color: var(--clr-blue-darkest);
-  background: var(--clr-bg-light);
-}
-
-/***** Services/Projects Teaser *****/
-.card {
-  background: var(--clr-bg-light);
-  text-align: center;
-}
-.card p{
-  text-align: center;
-}
-.block + .card-btn{
-  background: #fff;
-  border: 0;
-}
-
-/******  Why Choose US? *******/
-.why{
-  background-color: var(--clr-bg-light);
-  border-radius: 30px;
-}
-.why p{
-  color: var(--clr-blue-darkest);
-}
-.why .btn{
-  background: #fff;
-  color: var(--clr-blue-darkest);
-}
-.why .btn:hover{
   background: var(--clr-accent);
+  color: #000;
+  padding: 0.2em 0.4em;
+  box-shadow: 0 0 15px var(--clr-accent), 0 0 30px var(--clr-accent);
+}
+.hero p {
+  max-width: 800px;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  line-height: 1.6;
+  color: #fff;
+}
+.hero .btn {
+  color: #fff;
+}
+.hero .btn:hover {
   color: var(--clr-blue-darkest);
+  background: var(--clr-bg-light);
 }
 
-/****** Footer **********/
-.footer{
-  background: var(--clr-blue-darkest);
-}
-
-
-/***** General *****/
-.card{
+/* CARDS */
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  background: var(--clr-bg-light);
   border-radius: 30px;
-
+  text-align: center;
+  font-size: 1.5rem;
+}
+.card h3 {
+  font-size: 2rem;
+  padding-bottom: 1.1rem;
+}
+.card p {
+  max-width: 500px;
+  padding: 1rem 0.5rem;
 }
 
-/*
-  ========================================
-          GENERAL BUTTON STYLING
-  ========================================
-*/
+/* BUTTONS */
 .btn {
   margin-top: 1rem;
   padding: 1.5rem;
@@ -416,79 +192,109 @@ h1, h2, h3, h4, h5, h6{
   text-decoration: none;
   font-weight: 600;
 }
-.btn:hover{
+.btn:hover {
   background: var(--clr-blue-darkest);
 }
-
-/*
-  ========================================
-          RESPONSIVENESS
-  ========================================
-*/
-@media (max-width: 600px) {
-  .logo img {
-    height: 45px;
-  }
+.btn--alt {
+  background: #fff;
+  color: var(--clr-blue-darkest);
 }
-@media (max-width: 1024px) {
-  .primary-nav a {
-    margin-left: 2rem;
-    font-size: 1rem;
-  }
-
-  .cards--3 .card,
-  .cards--2 .card {
-    flex: 1 1 100%;
-    max-width: 100%;
-  }
-
-  .card img {
-    width: 90%;
-    height: auto;
-  }
-
-  .why .btn {
-    width: 60%;
-  }
+.btn--alt:hover {
+  background: var(--clr-accent);
 }
 
+/* WHY CHOOSE US */
+.why {
+  max-width: 1000px;
+  margin: 3rem auto 5rem;
+  background-color: var(--clr-bg-light);
+  border-radius: 30px;
+  padding: 2rem;
+  text-align: center;
+}
+.why h3 {
+  font-size: clamp(1.8rem, 4vw, 2rem);
+  margin-bottom: 2rem;
+  color: var(--clr-blue-darkest);
+}
+.why p {
+  font-size: 1.5rem;
+  max-width: 700px;
+  margin: 0 auto 2.5rem;
+  color: var(--clr-blue-darkest);
+}
+.why .btn {
+  display: block;
+  width: 60%;
+  margin: 0 auto;
+}
+
+/* FOOTER */
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: var(--clr-blue-darkest);
+  color: #fff;
+  flex-wrap: wrap;
+}
+.footer small {
+  margin-left: 1rem;
+}
+.footer .social-nav ul {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.footer .social-nav li {
+  display: flex;
+  align-items: center;
+}
+.footer .social-nav img {
+  width: 20px;
+  height: 2rem;
+  object-fit: contain;
+  margin-right: 0.3rem;
+}
+.footer .social-nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* RESPONSIVENESS */
 @media (max-width: 768px) {
-  .header {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    height: auto;
-    padding: 1rem;
+  .nav-toggle {
+    display: block;
   }
 
   .primary-nav {
-    display: flex;
+    display: none;
     flex-direction: column;
-    align-items: center;
-    margin-top: 1rem;
+    background-color: var(--clr-blue-darkest);
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+
+  .primary-nav.active {
+    display: flex;
   }
 
   .primary-nav a {
-    margin: 0.5rem 0;
-    font-size: 1rem;
+    margin: 1rem 0;
   }
 
-  .hero h1 {
-    font-size: 2rem;
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .hero p {
     font-size: 1.2rem;
-    max-width: 95%;
-  }
-
-  .hero .btn {
-    width: 90%;
-  }
-
-  .why {
-    margin-inline: 1rem;
-    padding: 1rem;
   }
 
   .why .btn {
@@ -497,39 +303,6 @@ h1, h2, h3, h4, h5, h6{
 
   .footer {
     flex-direction: column;
-    text-align: center;
-    gap: 1rem;
+    align-items: flex-start;
   }
-
-  .footer .social-nav ul {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .footer small {
-    margin-left: 0;
-  }
-
-  .card {
-    padding: 1.5rem 1rem;
-  }
-
-  .card p {
-    font-size: 1rem;
-    padding: 0.5rem;
-  }
-}
-
-/*
-  ========================================
-          CUSTOM STYLINGS
-  ========================================
-*/
-
-.hero h1{
-  background: var(--clr-accent);       
-  color: #000;                
-  padding: 0.2em 0.4em;             
-  display: inline-block;       
-  box-shadow: 0 0 15px var(--clr-accent), 0 0 30px var(--clr-accent); 
 }
