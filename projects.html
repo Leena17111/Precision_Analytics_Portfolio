@@ -16,12 +16,19 @@
       </a></div>
   
     <nav class="nav primary-nav">
+      <!-- nav hamburger menu -->
+      <button class="nav-toggle" aria-label="toggle navigation">
+        <img src="assets/img/hamburger-menu.png" alt="menu" />
+      </button>
+      <!-- nav links -->
+      <div class="nav-links">
         <a href="home.html">Home</a>
-        <a href="updated-about.html">About</a>
-        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
         <a href="projects.html">Projects</a>
         <a href="faqs.html">FAQs</a>
+        <a href="services.html">Services</a>
         <a href="contact.html">Contact</a>
+      </div>
     </nav>
   </header>
 
@@ -67,15 +74,29 @@
   <section class="block cards cards--2" id="projects-teaser">
     <section class="card">
       <h3>Startup Scouting for HP Tech Ventures</h3>
+      <br>
       <p>we conducted in-depth analytics to support HP Tech Ventures in identifying 
-        high-potential startups for strategic investment.
+        high-potential startups for strategic investment. Our work combined market research, 
+        financial modeling, and data visualization to guide investment due diligence 
+        across multiple sectors. 
       </p>
+      <br>
       <p>We evaluated over 70 early-stage startups using both qualitative assessments and quantitative metrics. This included:</p>
+      <br>
       <ul>
-        <li>Customer Acquisition Cost (CAC)</li>
-        <li>Lifetime Value (LTV)</li>
-        <li>Burn Rate & Runway</li>
-        <li>Monthly Recurring Revenue (MRR)</li>
+        <li><b>Customer Acquisition Cost (CAC): </b>Analyzed startups with CACs ranging from $30–$250, benchmarking against industry standards to identify sustainable growth models.</li>
+        <li><b>Lifetime Value (LTV): </b>Computed LTV using churn rates and average revenue, flagging companies with LTV:CAC ratios above 3:1 as strong candidates.</li>
+        <li><b>Burn Rate & Runway: </b>Assessed financial sustainability by calculating monthly burn rates and projecting runways, identifying startups with 12+ months runway as lower-risk options.</li>
+        <li><b>Monthly Recurring Revenue (MRR): </b>Tracked MRR growth, spotlighting startups with ≥15% month-over-month increases, indicating healthy traction.</li>
+      </ul>
+      <br>
+      <p>We used Open Refine for data cleaning, SQL and Excel for metric analysis, and created interactive reports using Power BI and Google Looker Studio. These dashboards visualized key metrics, competitive landscapes, and trend clusters.</p>
+      <br>
+      <ul>
+        Key Deliverables:
+        <li>Market maps across 5 sectors (AI, HealthTech, EdTech, Sustainability, Fintech)</li>
+        <li>Startup scoring matrix based on quantitative performance and strategic alignment</li>
+        <li>Shortlist of 12 high-potential startups for deeper due diligence</li>
       </ul>
       <div class="project-links btn btn-alt">
         <a href="projects.html" class="view-more">View More</a>
@@ -113,5 +134,8 @@
 
     </nav>
   </footer>
+
+  <script src="script.js"></script>
+
 </body>
 </html>
