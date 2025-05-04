@@ -434,3 +434,149 @@ h1, h2, h3, h4, h5, h6{
           CUSTOM STYLINGS
   ========================================
 */
+
+
+
+
+
+/***** ADDED FOR NAV HAM STUFF ****/
+/*****  Header  *****/
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  /* SIZING */
+
+  padding: 1rem 20px;
+}
+
+.logo img {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+}
+.logo img {
+  transform: scale(2.5);
+  transform-origin: left center;
+}
+.primary-nav {
+  position: relative;
+}
+
+
+/********** NAV HAMBURGER MENU ************/
+.primary-nav {
+  position: relative;
+}
+
+/* desktop */
+.nav-links {
+  display: flex;
+  gap: 1rem;
+}
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.nav-toggle img {
+  width: 30px;
+  height: auto;
+}
+/***** MEDIA QUERY FOR THE HAMBURGER MENU ****/
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: var(--clr-blue-darkest);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    z-index: 999;
+  }
+  .nav-links.show {          
+    display: flex;
+  }
+  .nav-toggle {
+    display: block;
+  }
+  .primary-nav a {
+    margin-left: 0 !important; 
+    padding: 1rem; 
+    text-align: center; 
+    color: var(--clr-text-light); 
+    display: block; 
+    width: 100%;
+    padding: 1rem 0; 
+    margin: 0 !important; 
+  }
+
+  .nav-links{
+    margin-left: -200px;
+  }
+  .nav-links {
+    left: -20px;   
+    right: -20px;   
+    width: calc(100% + 200px); 
+    margin-left: -150px;  
+    align-items: center;
+    padding: 1rem 0; 
+  }
+  
+}
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+    z-index: 1000; 
+    position: relative;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: var(--clr-blue-darkest);
+    position: fixed;
+    top: 80px;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    padding: 1rem 0;
+    z-index: 999;
+    margin-left: 0;
+    align-items: center;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .primary-nav a {
+    width: 100%;
+    padding: 1rem 0;
+    margin: 0;
+    text-align: center;
+  }
+
+  .header {
+    height: auto;
+    padding: 1rem 20px;
+    position: relative;
+    overflow: visible;
+  }
+
+  .logo img {
+    transform: scale(1.8);
+    transform-origin: left center;
+    margin-left: 15px;
+    height: 60px;
+  }
+
+  .nav-toggle img {
+    width: 30px;
+    height: auto;
+  }
+}
