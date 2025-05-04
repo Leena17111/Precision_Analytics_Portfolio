@@ -342,7 +342,7 @@ h1, h2, h3, h4, h5, h6{
 
 /***** Hero *****/
 .hero{
-  background-image: url(https://img.freepik.com/premium-photo/business-data-financial-figures-visualiser-graphic_31965-23939.jpg?semt=ais_hybrid&w=740);
+  background-image: url("assets/bghome.png");
 }
 .hero h1{
   color: #fff;
