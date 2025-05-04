@@ -2,49 +2,46 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Precision Analytics FAQs and client reviews." />
-  <meta name="author" content="Precision Analytics Team" />
-  <title>FAQs & Reviews Page | Precision Analytics</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FAQs & Reviews | Precision Analytics</title>
+  <link rel="stylesheet" href="assets/faqs_styles.css"/>
 </head>
 <body>
+
   <!-- Header -->
-  <header class="header">
-    <div class="header-content container">
-      <a href="home.html" class="logo">
-        <div class="logo-wrapper">
-          <img src="assets/logo-icon.webp" alt="Precision Analytics Logo" />
-          <span>Precision Analytics</span>
-        </div>
-      </a>
-      <nav class="nav primary-nav">
-        <a href="home.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="projects.html">Projects</a>
-        <a href="faqs.html" aria-current="page">FAQs</a>
-        <a href="services.html">Services</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </div>
+  <header class="block header">
+    <a href="home.html" class="logo">
+      <div class="logo-wrapper">
+        <img src="assets/logo-icon-blue.png" alt="Precision Analytics Logo" />
+      </div>
+    </a>
+    <nav class="nav primary-nav">
+      <a href="home.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="projects.html">Projects</a>
+      <a href="faqs.html" aria-current="page">FAQs</a>
+      <a href="contact.html">Contact</a>
+    </nav>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero-section">
-    <div class="hero-container container">
+  <section class="hero-split">
+    <div class="hero-container">
       <div class="hero-text">
-        <h1>FAQs and Reviews</h1>
-        <p><i>Your trusted partner in data-driven success. <br> Whether you're curious about our methods, tools, or the industries we serve — we've got answers. This space is built to clear doubts and showcase real voices from our clients who've experienced real results.</p>
-        </i> </p>
+        <h1>FAQs & Reviews</h1>
+        <p>
+            <i>Your trusted partner in data-driven success. <br> Whether you're curious about our methods, tools, or the industries we serve — we've got answers. This space is built to clear doubts and showcase real voices from our clients who've experienced real results.</i>
+        </p>
       </div>
       <div class="hero-img">
-        <img src="assets/faq-hero.webp" alt="FAQ Visual" />
+        <img src="faq-hero.webp" alt="Illustration showing FAQS" />
       </div>
     </div>
   </section>
+  
 
   <!-- FAQs Section -->
-  <section class="section">
+<section class="faq section">
     <div class="container">
       <h2 class="section-title">Frequently Asked Questions</h2>
       <div class="faq-list">
@@ -67,41 +64,53 @@
       </div>
     </div>
   </section>
-
-
+  
   <!-- Reviews Section -->
-  <section class="section container">
-    <h2>Clients' Reviews</h2>
-    <div class="reviews-flex">
-      <div class="review-tile">
-        <div class="stars">★★★★★</div>
-        <p><i>"They helped us reduce reporting time by 60%. Brilliant insights."</i></p>
-        <small>– Fatema Yusof · 5 months ago · Google</small>
-      </div>
-      <div class="review-tile">
-        <div class="stars">★★★★★</div>
-        <p><i>"Supply chain delays down 22%. Highly responsive and smart team."</i></p>
-        <small>– Layla Ahmed · 1 year ago · Google</small>
-      </div>
-      <div class="review-tile">
-        <div class="stars">★★★★☆</div>
-        <p><i>"The HR prediction model they built was clean and useful."</i></p>
-        <small>– Razan Salah · 3 months ago · Google</small>
+  <section class="reviews section">
+    <div class="container">
+      <h2>Clients' Reviews</h2>
+      <div class="reviews-flex">
+        <div class="review-tile">
+          <div class="stars">★★★★★</div>
+          <p><i>"They helped us reduce reporting time by 60%. Brilliant insights, their dashboards gave us real-time clarity we never had before."</i></p>
+          <small>- Fatema Yusof · 5 months ago · Google</small>
+        </div>
+        <div class="review-tile">
+          <div class="stars">★★★★★</div>
+          <p><i>"Supply chain delays down 22%. Highly responsive and smart team. Communication was clear throughout the entire process."</i></p>
+          <small>- Layla Ahmed · 1 year ago · Google</small>
+        </div>
+        <div class="review-tile">
+          <div class="stars">★★★★☆</div>
+          <p><i>"The HR prediction model they built was clean and useful. It helped us spot attrition risks before they became issues"</i></p>
+          <small>- Razan Salah · 3 months ago · Google</small>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-content container">
-      <small>&copy; 2025 Precision Analytics</small>
-      <nav class="social-nav">
-        <a href="https://www.linkedin.com/in/precisionanalyticsofficial" target="_blank">LinkedIn</a>
-        <a href="https://github.com/precisionanalyticsofficial" target="_blank">GitHub</a>
-        <a href="mailto:precisionanalytics.official@gmail.com">Email</a>
-      </nav>
-    </div>
+  <footer class="block footer">
+    <small>© 2025 Precision Analytics</small>
+    <nav class="nav social-nav">
+
+      <ul>
+        <li>
+          <img src="assets/img/gmail.png" alt="white gmail icon">
+          <a href="mailto:precisionanalytics.official@gmail.com">Gmail</a>
+        </li>
+        <li>
+          <img src="assets/img/github.png" alt="white github icon">
+          <a href="https://github.com/precisionanalyticsofficial">Github</a>
+        </li>
+        <li>
+          <img src="assets/img/linkedin.png" alt="white linkedin icon">
+          <a href="www.linkedin.com/in/precisionanalyticsofficial">LinkedIn</a>
+        </li>
+      </ul>
+      
+
+    </nav>
   </footer>
 </body>
 </html>
-
