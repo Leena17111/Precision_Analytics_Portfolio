@@ -161,12 +161,9 @@
   
   .hero-img img {
     max-width: 90%;
-    background: #fff;
     height: auto;
     max-height: 320px;
     object-fit: contain;
-    border-radius: 20px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   }
   
 
