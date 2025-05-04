@@ -263,46 +263,56 @@ table {
 }
 
 /* RESPONSIVENESS */
-@media (max-width: 768px) {
-  .nav-toggle {
-    display: block;
+@media (max-width: 1024px) {
+  .cards--3 .card, .cards--2 .card {
+    flex: 1 1 45%;
   }
 
   .primary-nav {
     display: none;
     flex-direction: column;
-    background-color: var(--clr-blue-darkest);
-    width: 100%;
-    text-align: center;
-    padding: 1rem 0;
+    background: var(--clr-blue-darkest);
     position: absolute;
     top: 100%;
-    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 999;
+    padding: 1rem;
   }
 
-  .primary-nav.active {
+  .primary-nav.show {
     display: flex;
   }
 
   .primary-nav a {
     margin: 1rem 0;
+    font-size: 1.2rem;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    font-size: 2rem;
+    color: var(--clr-text-light);
   }
 
   .header {
-    flex-direction: column;
-    align-items: flex-start;
+    position: relative;
   }
+}
 
-  .hero p {
-    font-size: 1.2rem;
+@media (max-width: 600px) {
+  .cards--3 .card, .cards--2 .card {
+    flex: 1 1 100%;
   }
 
   .why .btn {
     width: 80%;
   }
-
-  .footer {
-    flex-direction: column;
-    align-items: flex-start;
-  }
 }
+
+/* Default hamburger hidden on large screens */
+.hamburger {
+  display: none;
+}
+
