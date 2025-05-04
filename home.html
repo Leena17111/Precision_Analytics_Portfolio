@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="assets/style.css" />
+  <link rel="stylesheet" href="assets/styles.css" />
   <title>Home Page</title>
 </head>
 <body>
@@ -11,20 +11,23 @@
   <!-- Header -->
   <header class="block header">
     <div class="logo"><a href="home.html">
-      <img src="assets/logo-icon-blue.png" alt="precision analytics logo">
+      <img src="assets/img/logo-icon-blue.png" alt="precision analytics logo">
     </a></div>
 
-    <button class="nav-toggle" aria-label="toggle navigation">
-      ☰
-    </button>
-
     <nav class="nav primary-nav">
-      <a href="home.html">Home</a>
-      <a href="updated-about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="faqs.html">FAQs</a>
-      <a href="services.html">Services</a>
-      <a href="contact.html">Contact</a>
+      <!-- nav hamburger menu -->
+      <button class="nav-toggle" aria-label="toggle navigation">
+        <img src="assets/img/hamburger-menu.png" alt="menu" />
+      </button>
+      <!-- nav links -->
+      <div class="nav-links">
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="faqs.html">FAQs</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </div>
     </nav>
   </header>
 
@@ -41,19 +44,19 @@
 
     <section class="card">
       <h3>Business Intelligence</h3>
-      <img src="assets/BI.jpg" alt="Business Intelligence image">
+      <img src="assets/img/BI.jpg" alt="Business Intelligence image">
       <p>We build custom dashboards and reporting solutions to bring real-time visibility to your key metrics and KPIs. Empower your team with insights that drive performance.</p>
     </section>
 
     <section class="card">
       <h3>Data Engineering</h3>
-      <img src="assets/dataeng.jpg" alt="Data Engineering image">
+      <img src="assets/img/dataeng.jpg" alt="Data Engineering image">
       <p>Our team architects reliable, scalable data pipelines and infrastructure, ensuring your data is clean, integrated, and ready for analysis.</p>
     </section>
 
     <section class="card">
       <h3>Predictive Analytics</h3>
-      <img src="assets/predanalytics.jpg" alt="Predictive Analytics image">
+      <img src="assets/img/predanalytics.jpg" alt="Predictive Analytics image">
       <p>Leverage machine learning and statistical modeling to forecast trends, mitigate risk, and make proactive business decisions.</p>
     </section>
 
@@ -70,13 +73,13 @@
 
     <section class="card">
       <h3>Project Alpha</h3>
-      <img src="assets/dashboard.jpg" alt="Project Alpha image">
+      <img src="assets/img/dashboard.jpg" alt="Project Alpha image">
       <p>A comprehensive sales analytics dashboard built for a retail chain, integrating multiple data sources to provide actionable insights for regional managers.</p>
     </section>
 
     <section class="card">
       <h3>Project Beta</h3>
-      <img src="assets/seg.jpg" alt="Project Beta image">
+      <img src="assets/img/seg.jpg" alt="Project Beta image">
       <p>A customer segmentation and targeting solution developed for a fintech startup, boosting campaign conversion rates by over 25%.</p>
     </section>
   </section>
@@ -98,15 +101,15 @@
 
       <ul>
         <li>
-          <img src="assets/gmail.png" alt="white gmail icon">
+          <img src="assets/img/gmail.png" alt="white gmail icon">
           <a href="mailto:precisionanalytics.official@gmail.com">Gmail</a>
         </li>
         <li>
-          <img src="assets/github.png" alt="white github icon">
+          <img src="assets/img/github.png" alt="white github icon">
           <a href="https://github.com/precisionanalyticsofficial">Github</a>
         </li>
         <li>
-          <img src="assets/linkedin.png" alt="white linkedin icon">
+          <img src="assets/img/linkedin.png" alt="white linkedin icon">
           <a href="www.linkedin.com/in/precisionanalyticsofficial">LinkedIn</a>
         </li>
       </ul>
@@ -114,15 +117,8 @@
 
     </nav>
   </footer>
-  <script>
-    const navToggle = document.querySelector('.nav-toggle');
-    const nav = document.querySelector('.primary-nav');
-
-    navToggle.addEventListener('click', () => {
-    nav.classList.toggle('active');
-    });
-  </script>
-
+  
+  <script src="script.js"></script>
 
 </body>
 </html>
