@@ -412,7 +412,7 @@ h1, h2, h3, h4, h5, h6{
   margin-top: 1rem;
   padding: 1.5rem;
   border: 0;
-  background: #28496C;
+  background: var(--clr-blue-darkest);
   font-size: 1.1rem;
   color: #fff;
   border-radius: 0.25rem;
