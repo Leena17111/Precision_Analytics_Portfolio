@@ -58,6 +58,7 @@ table {
   --clr-text-light: #FDFDFD;     /* Cream / soft white text */
   --clr-hover: #CBD5E1;     /* Soft gray-blue for hover, borders */
   --clr-accent: #3498db;    /* Optional accent / highlight */
+ 
 }
 
 
@@ -412,7 +413,7 @@ h1, h2, h3, h4, h5, h6{
   margin-top: 1rem;
   padding: 1.5rem;
   border: 0;
-  background: var(--clr-blue-darkest);
+  background: var(--clr-accent);
   font-size: 1.1rem;
   color: #fff;
   border-radius: 0.25rem;
@@ -420,7 +421,7 @@ h1, h2, h3, h4, h5, h6{
   font-weight: 600;
 }
 .btn:hover{
-  background:   var(--clr-bg-light);
+  background: var(--clr-blue-darkest);
 }
 
 /********** NAV HAMBURGER MENU ************/
