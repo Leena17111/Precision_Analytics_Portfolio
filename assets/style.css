@@ -338,7 +338,7 @@ h1, h2, h3, h4, h5, h6{
   background-color: var(--clr-blue-darkest);
 }
 .header *{
-  color: var(--clr-text-light);
+  color: #FFFFFF;
 }
 .header a:hover{
   color: var(--clr-accent);
