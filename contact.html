@@ -82,7 +82,15 @@
       </ul>
     </nav>
   </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+  const urlParams = new URLSearchParams(window.location.search);
+  if (urlParams.get('success') === '1') {
+    alert('Thank you! Your message has been sent successfully.');
+  }
+});
 
+  </script>
   <script src="script.js"></script>
 
 </body>
