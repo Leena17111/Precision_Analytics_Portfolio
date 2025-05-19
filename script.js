@@ -10,29 +10,28 @@ if (navToggle && navLinks) {
 
 /* ==========  CONTACT-FORM VALIDATION  ========== */
 function validateForm(event) {
-  event.preventDefault();                     
+  const name    = document.getElementById('name')?.value.trim() ?? '';
+  const email   = document.getElementById('email')?.value.trim() ?? '';
+  const subject = document.getElementById('subject')?.value.trim() ?? '';
+  const message = document.getElementById('message')?.value.trim() ?? '';
 
-  const name    = document.getElementById('name')    ?.value.trim() ?? '';
-  const email   = document.getElementById('email')   ?.value.trim() ?? '';
-  const subject = document.getElementById('subject') ?.value.trim() ?? '';
-  const message = document.getElementById('message') ?.value.trim() ?? '';
+  let errors = [];
 
-  /*  all error messages requested by the user  */
-  if (!name)           { alert('Name is required.');                return false; }
-  if (!email)          { alert('Email is required.');               return false; }
-
-  const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,}$/i;                
-  if (!emailPattern.test(email)) {
-    alert('Email invalid.');
-    return false;
+  if (!name) errors.push('Name is required.');
+  if (!email) errors.push('Email is required.');
+  else {
+    const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,}$/i;
+    if (!emailPattern.test(email)) errors.push('Email invalid.');
   }
+  if (!subject) errors.push('Subject is required.');
+  if (!message) errors.push('Message is required.');
 
-  if (!subject)        { alert('Subject is required.');             return false; }
-  if (!message)        { alert('Message is required.');             return false; }
-
-  alert("Form submitted correctly, you'll hear from us shortly.");
-  event.target.reset();                                          
-  return true;
+  if (errors.length > 0) {
+    alert(errors.join('\n'));
+    event.preventDefault();  // <== This prevents the form from submitting
+  } else {
+    alert("Form submitted correctly, you'll hear from us shortly.");
+  }
 }
 
 // add validation part only when needed in a page

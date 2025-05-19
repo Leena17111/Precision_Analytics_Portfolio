@@ -630,3 +630,8 @@ form {
     height: auto;
   }
 }
+
+ .php-error-header,
+    .php-error-list {
+      display: none;
+    }
